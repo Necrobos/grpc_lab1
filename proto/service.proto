@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package calculator;
+
+// Простой сервис калькулятора
+service Calculator {
+  // Сложение двух чисел
+  rpc Add (AddRequest) returns (AddResponse) {}
+
+  // Умножение двух чисел
+  rpc Multiply (MultiplyRequest) returns (MultiplyResponse) {}
+
+  // Приветствие по имени
+  rpc Greet (GreetRequest) returns (GreetResponse) {}
+}
+
+// Запрос для сложения
+message AddRequest {
+  double number1 = 1;
+  double number2 = 2;
+}
+
+// Ответ для сложения
+message AddResponse {
+  double result = 1;
+}
+
+// Запрос для умножения
+message MultiplyRequest {
+  double number1 = 1;
+  double number2 = 2;
+}
+
+// Ответ для умножения
+message MultiplyResponse {
+  double result = 1;
+}
+
+// Запрос для приветствия
+message GreetRequest {
+  string name = 1;
+}
+
+// Ответ для приветствия
+message GreetResponse {
+  string greeting = 1;
+}
