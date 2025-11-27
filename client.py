@@ -71,7 +71,7 @@ def run_client():
     client.multiply_numbers(7, 8)
 
     # Тест 3: Приветствие
-    client.greet("Максим")
+    client.greet("Михаил")
 
     # Тест 4: Дробные числа
     client.add_numbers(3.14, 2.71)
